@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mvc="http://www.springframework.org/schema/mvc">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="header">
+    <h3>Приложение Голосовалка</h3>
+</div>
+<div class="container">
+    <div class="leftContainer">
+        <h4><span class="badge badge-secondary">Создание темы голосования</span></h4>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Текст темы голосования</span>
+            </div>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <button type="button" class="btn btn-outline-primary btn-lg btn-block">Добавить вариант ответа</button>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="answerText1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Текст ответа" aria-label="Текст ответа"
+                   aria-describedby="answerText1">
+            <button type="button" class="btn btn-outline-success btn-lg btn-block">Сахранить тему голосования</button>
+        </div>
+    </div>
+
+    <div class="rightContainer">
+        <div class="list-group">
+            <h4><span class="badge badge-secondary">Созданные голосования</span></h4>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-info">This is a info list group
+                item</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-light">This is a light list group
+                item</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-dark">This is a dark list group
+                item</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

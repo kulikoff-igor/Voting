@@ -12,10 +12,11 @@ $(document).ready(function () {
         addAnswerText();
     });
     $("#saveSubjectText").click(function () {
+        console.log(saveSubjectTextInJson());
         $.post( "addVoting",{voting :saveSubjectTextInJson()} , function( data ) {
            console.log(data );
         });
-        //console.log(saveSubjectTextInJson());
+
     })
 
 });

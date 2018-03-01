@@ -1,15 +1,28 @@
-.container{
+.mainContainer{
+    padding-left: 2%;
+    padding-right: 2%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-}
-.leftContainer{
-    flex: 4 3 50em;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
 
 }
+.leftContainer{
+    flex: 4 3 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 1%;
+}
+.leftContainer .input-group{
+    padding-bottom: 1%;
+}
+.leftContainer .btn{
+    margin-bottom: 1%;
+}
+
 .rightContainer{
-    flex: 2 3 30em;
+    flex: 2 3 20em;
+}
+.header{
+    text-align: center;
 }

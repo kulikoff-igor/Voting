@@ -1,6 +1,5 @@
-package com.example.voting.Voting.Controller;
+package com.example.voting.Voting.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 

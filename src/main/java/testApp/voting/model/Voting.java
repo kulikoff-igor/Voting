@@ -1,12 +1,11 @@
-package com.example.voting.Voting.model;
+package testApp.voting.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "vote")
-public class Vote {
+@Table(name = "votingAnswers")
+public class Voting {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,12 +20,11 @@ public class Vote {
     @Column(name = "creationDateVote")
     private String creationDateVote;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<VotingAnswerOption> votingAnswerOption = new ArrayList<>();
-
     @Column(name = "statusVote")
     private Boolean statusVote;
 
+    @OneToMany(cascade = CascadeType.REMOVE)
+    private List<VotingAnswer> votingAnswers;
 
     public Integer getId() {
         return id;
@@ -56,12 +54,12 @@ public class Vote {
         return creationDateVote;
     }
 
-    public List<VotingAnswerOption> getVotingAnswerOption() {
-        return votingAnswerOption;
+    public List<VotingAnswer> getVotingAnswers() {
+        return votingAnswers;
     }
 
-    public void setVotingAnswerOption(List<VotingAnswerOption> votingAnswerOption) {
-        this.votingAnswerOption = votingAnswerOption;
+    public void setVotingAnswers(List<VotingAnswer> votingAnswers) {
+        this.votingAnswers = votingAnswers;
     }
 
     public void setCreationDateVote(String creationDateVote) {

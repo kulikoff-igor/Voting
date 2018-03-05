@@ -1,4 +1,4 @@
-package com.example.voting.Voting;
+package testApp.voting;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

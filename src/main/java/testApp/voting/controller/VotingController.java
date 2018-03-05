@@ -1,4 +1,4 @@
-package com.example.voting.Voting.controller;
+package testApp.voting.controller;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.*;
  * Created by admin on 01.03.2018.
  */
 @RestController
-public class AddVotingController {
+public class VotingController {
 
-    public AddVotingController() {
+    public VotingController() {
     }
 
     @RequestMapping(value = "/addVoting", method = RequestMethod.POST)

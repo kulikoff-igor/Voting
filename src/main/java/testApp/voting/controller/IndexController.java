@@ -1,4 +1,4 @@
-package com.example.voting.Voting.controller;
+package testApp.voting.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

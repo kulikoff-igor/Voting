@@ -1,4 +1,4 @@
-package testApp.voting.Voting;
+package testApp.voting;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

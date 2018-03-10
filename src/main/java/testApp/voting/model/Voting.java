@@ -1,11 +1,16 @@
 package testApp.voting.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "votingAnswers")
+@Table(name = "voting")
 public class Voting {
+
+    public Voting() {
+    }
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,8 +28,16 @@ public class Voting {
     @Column(name = "statusVote")
     private Boolean statusVote;
 
-    @OneToMany(cascade = CascadeType.REMOVE)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<VotingAnswer> votingAnswers;
+
+    public Voting(String hrefVote, String topicVote, String creationDateVote, Boolean statusVote, List<VotingAnswer> votingAnswers) {
+        this.hrefVote = hrefVote;
+        this.topicVote = topicVote;
+        this.creationDateVote = creationDateVote;
+        this.statusVote = statusVote;
+        this.votingAnswers = votingAnswers;
+    }
 
     public Integer getId() {
         return id;

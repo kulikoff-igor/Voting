@@ -6,6 +6,9 @@ import java.util.List;
 @Entity
 @Table(name = "votingAnswer")
 public class VotingAnswer {
+    public VotingAnswer() {
+    }
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,7 +17,21 @@ public class VotingAnswer {
     @Column(name = "voteText")
     private String voteText;
 
-    @OneToMany(cascade = CascadeType.REMOVE)
+    public VotingAnswer(String voteText, List<Vote> vote) {
+        this.voteText = voteText;
+        this.vote = vote;
+    }
+
+    public List<Vote> getVote() {
+        return vote;
+    }
+
+    public void setVote(List<Vote> vote) {
+        this.vote = vote;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL)
+    //@OneToMany(targetEntity = Vote.class, mappedBy = "votingAnswer", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     private List<Vote> vote;
 
     public Integer getId() {

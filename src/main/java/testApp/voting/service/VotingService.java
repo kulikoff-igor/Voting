@@ -12,5 +12,5 @@ public interface VotingService {
 
     Voting updateVoting(Voting voting);
 
-    Optional<Voting> getVotingInfo(String src);
+    Optional<Voting> getVotingByHref(String hrefVotingVal);
 }

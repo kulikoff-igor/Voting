@@ -30,7 +30,7 @@ public class VotingServiceImpl implements VotingService {
     }
 
     @Override
-    public Optional<Voting> getVotingInfo(String hrefVoteVal) {
-        return votingRepository.findByHrefVote(hrefVoteVal);
+    public Optional<Voting> getVotingByHref(String hrefVoteVal) {
+        return votingRepository.findByHrefVoting(hrefVoteVal);
     }
 }

@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface VotingRepository extends JpaRepository<Voting, Integer> {
 
-    Optional<Voting> findByHrefVote(String hrefVoteVal);
+    Optional<Voting> findByHrefVoting(String hrefVotingVal);
 }

@@ -11,8 +11,6 @@ import testApp.voting.model.VotingAnswer;
 import testApp.voting.repository.VotingRepository;
 import testApp.voting.service.VotingService;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -46,7 +44,7 @@ public class VotingApplicationTests {
 
         votingService.createVoting(voting);
 
-        Optional<Voting> testVotingOptional = votingService.getVotingInfo("evssv");
+        Optional<Voting> testVotingOptional = votingService.getVotingByHref("evssv");
         Voting testVoting = testVotingOptional.get();
         System.out.println("1. " + testVoting.getTopicVote() + " . " +testVoting.getVotingAnswers().toArray().length);
         testVoting.getVotingAnswers().add(votingAnswer2);

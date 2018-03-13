@@ -26,12 +26,11 @@ public class VotingAnswer {
         return vote;
     }
 
-    public void setVote(List<Vote> vote) {
+    public void addVote(List<Vote> vote) {
         this.vote = vote;
     }
 
     @OneToMany(cascade = CascadeType.ALL)
-    //@OneToMany(targetEntity = Vote.class, mappedBy = "votingAnswer", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     private List<Vote> vote;
 
     public Integer getId() {
@@ -51,4 +50,7 @@ public class VotingAnswer {
     }
 
 
+    public void addVote(Vote vote) {
+        this.vote.add(vote);
+    }
 }

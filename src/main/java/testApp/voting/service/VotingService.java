@@ -1,5 +1,6 @@
 package testApp.voting.service;
 
+import testApp.voting.model.Vote;
 import testApp.voting.model.Voting;
 
 import java.util.List;
@@ -13,4 +14,5 @@ public interface VotingService {
     Voting updateVoting(Voting voting);
 
     Optional<Voting> getVotingByHref(String hrefVotingVal);
+    List<Vote> getListVoteVotingAnswer(String hrefVoteVal, Integer id);
 }

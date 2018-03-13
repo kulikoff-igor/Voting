@@ -1,7 +1,6 @@
 package testApp.voting.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -16,8 +15,8 @@ public class Voting {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "hrefVote")
-    private String hrefVote;
+    @Column(name = "hrefVoting")
+    private String hrefVoting;
 
     @Column(name = "topicVote")
     private String topicVote;
@@ -31,8 +30,8 @@ public class Voting {
     @OneToMany(cascade = CascadeType.ALL)
     private List<VotingAnswer> votingAnswers;
 
-    public Voting(String hrefVote, String topicVote, String creationDateVote, Boolean statusVote, List<VotingAnswer> votingAnswers) {
-        this.hrefVote = hrefVote;
+    public Voting(String hrefVoting, String topicVote, String creationDateVote, Boolean statusVote, List<VotingAnswer> votingAnswers) {
+        this.hrefVoting = hrefVoting;
         this.topicVote = topicVote;
         this.creationDateVote = creationDateVote;
         this.statusVote = statusVote;
@@ -47,12 +46,12 @@ public class Voting {
         this.id = id;
     }
 
-    public String getHrefVote() {
-        return hrefVote;
+    public String getHrefVoting() {
+        return hrefVoting;
     }
 
-    public void setHrefVote(String hrefVote) {
-        this.hrefVote = hrefVote;
+    public void setHrefVoting(String hrefVoting) {
+        this.hrefVoting = hrefVoting;
     }
 
     public String getTopicVote() {
